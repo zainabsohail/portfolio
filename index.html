@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zainab Sohail — Data & Business Analyst</title>
+<title>Zainab Sohail - AI & Data Analyst</title>
 <meta name="description" content="Zainab Sohail: data and business analyst at Siemens Healthineers, finishing an M.Sc. in Artificial Intelligence at FAU Erlangen-Nürnberg.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -232,6 +232,33 @@ section{padding:130px 0;position:relative}
 footer{max-width:1200px;margin:110px auto 0;padding:24px 28px 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:var(--muted)}
 footer .sig{font:400 34px/1 var(--script);color:var(--violet)}
 
+
+/* ---------- skills (pill rows) ---------- */
+.sk-row{margin-top:46px}
+.sk-row:first-of-type{margin-top:0}
+.sk-label{font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.sk-big,.sk-pills{list-style:none;display:flex;flex-wrap:wrap;gap:12px}
+.sk-big li{font:400 clamp(20px,2.2vw,28px)/1 var(--serif);padding:16px 24px;border:2px solid var(--ink);border-radius:999px;transition:background .25s,color .25s}
+.sk-big li:hover{background:var(--violet);border-color:var(--violet);color:#fff}
+.sk-pills li{font-size:15px;padding:9px 18px;border:1px solid #BDB8CF;border-radius:999px;background:transparent;transition:background .2s,color .2s,border-color .2s}
+.sk-pills li:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.sk-certs{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);border:1px solid #BDB8CF}
+.sk-certs li{padding:20px 22px;border-right:1px solid #BDB8CF;border-bottom:1px solid #BDB8CF}
+.sk-certs li:nth-child(2n){border-right:0}
+.sk-certs li:nth-last-child(-n+2){border-bottom:0}
+.sk-certs b{display:block;font:500 19px/1.25 var(--serif)}
+.sk-certs span{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.sk-langs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));max-width:600px;border:1px solid #BDB8CF}
+.sk-langs div{padding:20px 22px;border-right:1px solid #BDB8CF}
+.sk-langs div:last-child{border-right:0}
+.sk-langs b{display:block;font:500 22px/1.2 var(--serif)}
+.sk-langs span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media (max-width:700px){.sk-certs{grid-template-columns:1fr}.sk-certs li{border-right:0}.sk-certs li:nth-last-child(2){border-bottom:1px solid #BDB8CF}.sk-langs{grid-template-columns:1fr 1fr}}
+
+/* ---------- separator lines ---------- */
+main > section + section::before, main > header + section::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1144px, calc(100% - 56px));height:1px;background:var(--line)}
+.proj + .proj{border-top:1px solid var(--line);padding-top:110px}
+
 /* ---------- responsive ---------- */
 @media (max-width:1000px){
   .navlinks{display:none;position:absolute;top:76px;right:20px;flex-direction:column;border-radius:20px;padding:8px}
@@ -425,28 +452,29 @@ footer .sig{font:400 34px/1 var(--script);color:var(--violet)}
 <section id="skills">
   <div class="wrap">
     <div class="sec-head"><h2>Skills, <em>certificates</em> & languages</h2></div>
-    <div class="three">
-      <div class="panel">
-        <h3>Skills</h3>
-        <div class="group"><h4>Data & analytics</h4><ul class="pills"><li>Python</li><li>SQL</li><li>Pandas</li><li>NumPy</li><li>Power BI</li><li>Power Query</li><li>Excel</li><li>Matplotlib</li><li>Statistics</li><li>ETL / data pipelines</li></ul></div>
-        <div class="group"><h4>Machine learning & AI</h4><ul class="pills"><li>scikit-learn</li><li>PyTorch</li><li>K-Means & clustering</li><li>Computer vision</li><li>Image segmentation</li><li>OpenCV</li><li>Tesseract OCR</li><li>LLM applications (Claude API)</li></ul></div>
-        <div class="group"><h4>Signal & neuro data</h4><ul class="pills"><li>EEG analysis</li><li>Signal processing</li><li>SciPy</li><li>MNE-Python</li></ul></div>
-        <div class="group"><h4>Automation & tools</h4><ul class="pills"><li>Power Apps</li><li>Power Automate</li><li>SharePoint Online</li><li>Microsoft 365</li><li>Git / GitHub</li><li>Jupyter</li><li>Azure DevOps</li><li>Jira</li><li>SAP</li><li>Salesforce</li></ul></div>
-        <div class="group"><h4>Business</h4><ul class="pills"><li>Requirements analysis</li><li>Stakeholder management</li><li>Workshops</li><li>User training</li><li>Process documentation</li></ul></div>
-      </div>
-      <div class="panel">
-        <h3>Certificates</h3>
-        <ul class="certs">
-          <li><b>Deep Learning in Computational Science and Engineering</b><span>Ferienakademie, FAU and TUM</span></li>
-          <li><b>Software Development Methodologies</b><span>Coursera</span></li>
-          <li><b>Selenium WebDriver Basics with C#</b><span>Udemy</span></li>
-          <li><b>Web Development (PHP, SQL)</b><span>Udemy</span></li>
-        </ul>
-      </div>
-      <div class="panel" id="langs">
-        <h3>Languages</h3>
-        <div class="lang"><div class="top">English <span>C1</span></div><div class="bar"><i style="--w:88%"></i></div><p>Professional working language</p></div>
-        <div class="lang"><div class="top">German <span>A2</span></div><div class="bar"><i style="--w:34%"></i></div><p>Everyday conversations, still learning</p></div>
+
+    <div class="sk-row"><h4 class="sk-label">Interests</h4>
+      <ul class="sk-big"><li>AI × Business decisions</li><li>Industrial & applied AI</li><li>Process automation</li><li>Neuroscience & data</li></ul>
+    </div>
+    <div class="sk-row"><h4 class="sk-label">Data & analytics</h4><ul class="sk-pills"><li>Python</li><li>SQL</li><li>Pandas</li><li>NumPy</li><li>Power BI</li><li>Power Query</li><li>Excel</li><li>Matplotlib</li><li>Statistics</li><li>ETL / data pipelines</li></ul></div>
+    <div class="sk-row"><h4 class="sk-label">Machine learning & AI</h4><ul class="sk-pills"><li>scikit-learn</li><li>PyTorch</li><li>K-Means & clustering</li><li>Computer vision</li><li>Image segmentation</li><li>OpenCV</li><li>Tesseract OCR</li><li>LLM applications (Claude API)</li></ul></div>
+    <div class="sk-row"><h4 class="sk-label">Signal & neuro data</h4><ul class="sk-pills"><li>EEG analysis</li><li>Signal processing</li><li>SciPy</li><li>MNE-Python</li></ul></div>
+    <div class="sk-row"><h4 class="sk-label">Automation & tools</h4><ul class="sk-pills"><li>Power Apps</li><li>Power Automate</li><li>SharePoint Online</li><li>Microsoft 365</li><li>Git / GitHub</li><li>Jupyter</li><li>Azure DevOps</li><li>Jira</li><li>SAP</li><li>Salesforce</li></ul></div>
+    <div class="sk-row"><h4 class="sk-label">Business</h4><ul class="sk-pills"><li>Requirements analysis</li><li>Stakeholder management</li><li>Workshops</li><li>User training</li><li>Process documentation</li></ul></div>
+
+    <div class="sk-row"><h4 class="sk-label">Certificates</h4>
+      <ul class="sk-certs">
+        <li><b>Deep Learning in Computational Science and Engineering</b><span>Ferienakademie, FAU and TUM</span></li>
+        <li><b>Software Development Methodologies</b><span>Coursera</span></li>
+        <li><b>Selenium WebDriver Basics with C#</b><span>Udemy</span></li>
+        <li><b>Web Development (PHP, SQL)</b><span>Udemy</span></li>
+      </ul>
+    </div>
+
+    <div class="sk-row"><h4 class="sk-label">Languages</h4>
+      <div class="sk-langs">
+        <div><b>English</b><span>C1</span></div>
+        <div><b>Deutsch</b><span>A2</span></div>
       </div>
     </div>
   </div>
@@ -542,7 +570,7 @@ function heroFrame(){
   cue.style.opacity = 1 - clamp(p / .1);
   phCap.style.opacity = 1 - clamp(p / .08);
   tags.forEach((t, i) => {
-    const start = .38 + i * .035, k = ease(clamp((p - start) / .2));
+    const start = .05 + i * .035, k = ease(clamp((p - start) / .25));
     const tx = +t.dataset.x, ty = (vw < 640 && t.dataset.my) ? +t.dataset.my : +t.dataset.y, rot = +t.dataset.r, depth = +t.dataset.d;
     const fromX = (50 - tx) * vw / 100 * (1 - k), fromY = (50 - ty) * vh / 100 * (1 - k);
     const px = (mouse.nx - .5) * 30 * depth, py = (mouse.ny - .5) * 24 * depth;
@@ -627,7 +655,7 @@ const D = {
     const fields=['Order no.','Customer','Date','Item','Quantity','Reason','Condition','Refund'];
     const rowH=(dh-70)/fields.length, step=Math.floor((s*1.6)%(fields.length+4));
     const fx=dx_+dw+30, fh=(dh-24)/fields.length;
-    txt(x,`Extracted ${Math.min(step,8)} of 8 fields`,fx,dy+10,K.muted,12,600);
+    txt(x,`Extracted ${Math.min(step,8)} of 8 fields`,fx,h-10,K.violet,12,700);
     fields.forEach((f,i)=>{
       const ry=dy+54+i*rowH;
       x.fillStyle='#CFC9E6'; x.fillRect(dx_+22,ry,dw*(i%3?.62:.48),5);
@@ -789,7 +817,7 @@ const countIO = new IntersectionObserver(es => es.forEach(e => {
 }), {threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
 const langIO = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), {threshold:.4});
-langIO.observe(document.getElementById('langs'));
+const langsEl = document.getElementById('langs'); if (langsEl) langIO.observe(langsEl);
 
 /* ---------- gallery: vertical scroll moves photos right-to-left ---------- */
 const PHOTOS = [
